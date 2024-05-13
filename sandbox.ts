@@ -1,19 +1,14 @@
-let character = "mario";
-let age = 30;
-let isBlackBelt = false;
+let names = ["Alice", "Bob", "Charlie"];
+names.push("David");
 
-// character = 20;
-character = "luigi";
+// names.push(3); Error: Argument of type '3' is not assignable to parameter of type 'string'.
 
-// age = 'yoshi';
-age = 40;
+let numbers = [1, 2, 3];
+numbers.push(4);
+// numbers.push("5"); Error: Argument of type '"5"' is not assignable to parameter of type 'number'.
 
-// isBlackBelt = 'yes';
-isBlackBelt = true;
-
-const circ = (diameter: number) => {
-  return diameter * Math.PI;
-};
-
-// console.log(area('hello'));
-console.log(circ(7.5));
+let mixed = ["Alice", 1, "Bob", 2, true];
+mixed.push("Charlie");
+mixed.push(3);
+mixed.push(false);
+console.log(mixed);
