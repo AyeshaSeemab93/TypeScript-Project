@@ -1,14 +1,18 @@
-let names = ["Alice", "Bob", "Charlie"];
-names.push("David");
+let details = {
+  name: "John Doe",
+  age: 25,
+  isStudent: false,
+};
 
-// names.push(3); Error: Argument of type '3' is not assignable to parameter of type 'string'.
+details.name = "Hamper"; // OK
+details.age = 30; // OK
+details.isStudent = true; // OK
 
-let numbers = [1, 2, 3];
-numbers.push(4);
-// numbers.push("5"); Error: Argument of type '"5"' is not assignable to parameter of type 'number'.
+details = {
+  name: "Hamper",
+  isStudent: true,
+  age: 30,
+  //  skills: ["JavaScript", "TypeScript"], // Error: Object literal may only specify known properties, and 'skills' does not exist in type '{ name: string; age: number; isStudent: boolean; }'.
+};
 
-let mixed = ["Alice", 1, "Bob", 2, true];
-mixed.push("Charlie");
-mixed.push(3);
-mixed.push(false);
-console.log(mixed);
+console.log(details); // { name: 'Hamper', age: 30, isStudent: true }
